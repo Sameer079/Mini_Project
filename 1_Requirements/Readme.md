@@ -1,13 +1,11 @@
 # Requirements
 ## Introduction
- * Tic-tac-toe, also known as noughts and crosses, or Xs and Os/“X’y O’sies”, is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a diagonal, horizontal, or vertical row is the winner. It is a solved game with a forced draw assuming best play from both players. It is usually played on paper but as the technology evolved, here is a digital version of it.
- * This topic was chosen because it gives me an opportunity to implement and understand multiple C programming concepts.
+ * Tic-tac-toe, also known as noughts and crosses, is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a diagonal, horizontal, or vertical row is the winner. It is a solved game with a forced draw assuming best play from both players. It is usually played on paper but as the technology evolved, here is a digital version of it.
 
 ## Research
 ### Tic-tac-toe Game Features and Benefits
 It is often used as a pedagogical tool for teaching the concepts of good sportsmanship and the branch of artificial intelligence that deals with the searching of game trees. It is straightforward to write a computer program to play tic-tac-toe perfectly or to enumerate the 765 essentially different positions (the state space complexity) or the 26,830 possible games up to rotations and reflections (the game tree complexity) on this space. If played optimally by both players, the game always ends in a draw, making tic-tac-toe a futile game.
 
-The game can be generalized to an m,n,k-game in which two players alternate placing stones of their own color on an m×n board, with the goal of getting k of their own color in a row. Tic-tac-toe is the (3,3,3)-game.Harary's generalized tic-tac-toe is an even broader generalization of tic-tac-toe. It can also be generalized as a nd game. Tic-tac-toe is the game where n equals 3 and d equals 2.It can be generalised even further by playing on an arbitrary incidence structure, where rows are lines and cells are points.
 
 ## Benefits
 Tic-tac-toe Game offers a few benefits. Here are just a few of them:
@@ -19,7 +17,7 @@ Like any game, tic tac toe also teaches a person to accept the defeat as well as
 It prepares a person for more complex games because they have to think of multiple things at one time.
 
 ### Developement of Coordination
-Tic-tac-toe helps develop coordination, fine motor skills and visual skills.
+Tic-tac-toe helps to develop coordination, fine motor skills and visual skills.
 
 ### Mannerism
 It helps one to learn how to follow rules and take turns.
@@ -38,14 +36,13 @@ It can help to improve a person's concentration as well as strategic thinking
 
 ![Description]//(https://github.com/ArnoldKevinDesouza/Tic-Tac-Toe/blob/main/6_Media/flow.png?raw=true)
 ### Explanation:
-* The game starts giving you three input options(1, 2, 3):
-    * 1 means you play using 'X'.
-    * 2 means you play using 'O'.
-    * 3 means you exit the game.
+* The game starts giving you single input options(1, 2, 3, 4, 5, 6, 7, 8, 9):
+    * Player 1 palys with 'X', and enter the no. which place want to select.
+    * Player 2 plays with 'O', and enter the no. which place want to select.
 * The game ends when:
-    * It is in a draw situation , i.e, a total of 9 moves have been completed and novody has won.
-    * You win.
-    * The computer wins.
+    * It is in a draw situation , i.e, a total of 9 moves have been completed and nobody has won.
+    * Player 1 win.
+    * Player 2 wins.
 * The game continues in the beginning if the check for draw is false.
 * Then it checks if anyone has won yet.
 * If not, then it again checks if it is a draw situation.
@@ -78,22 +75,19 @@ It can help to improve a person's concentration as well as strategic thinking
 ## High Level Requirements: 
 | ID | Description | 
 | ----- | ----- | 
-| HR01 | User shall be able to choose 'X' to play |
-| HR02 | User shall be able to choose 'O' to play |
-| HR03 | User shall be able to Exit the game |
-| HR04 | User shall lose|
-| HR05 | User shall win|
-| HR06 | User shall end up in a Draw situation|
+| HR01 | User shall be able to enter the place for Palyer 1 |
+| HR02 | User shall be able to enter the place for player 2 |
+| HR03 | Player 1 shall lose and Player 2 shall win|
+| HR04 | Player 1 shall win and Player 2 shall lose|
+| HR05 | Both Players shall end up in a Draw situation|
 ##  Low level Requirements:
  
 | ID | Description | HLR ID |
 | ------ | --------- | ------ |
-| LR01 | If the user presses '1', he'll be play with 'X'. | HR01 |
-| LR02 | If the user is playing with 'X', he'll get the first turn. | HR01 |
-| LR03 | If the user presses '2', he'll be play with 'O'. | HR02 |
-| LR04 | If the user is playing with 'O', he'll get the second turn. | HR02 |
-| LR05 | If the user presses '3', it'll exit the game. | HR03 |
-| LR06 | If the computer gets 3 Xs or 3 Os in vertical,horizontal or diagonal row, User will lose. | HR04 |
-| LR07 | If the user gets 3 Xs or 3 Os(as per his choice), in vertical,horizontal or diagonal row, he'll win. | HR05 |
-| LR08 | If the total number of moves, i.e., 9 moves have been completed and neithe the user nor the computer has won, it'll end up in a draw. | HR06 |
+| LR01 | If the Player 1 enters any digit from 1 to 9 then it should mark 'X' and return invalid if already marked. | HR01 |
+| LR02 | If the Player 2 enters any digit from 1 to 9 then it should mark 'O' and return invalid if already marked. | HR02 |
+| LR03 | If the Player is playing with 'O', he'll be the Player 2 and get second chance. | HR02 |
+| LR04 | If the Player 1 gets 3 Xs in vertical,horizontal or diagonal row, Player 2 will lose. | HR04 |
+| LR05 | If the Player 2 gets 3 Os in vertical,horizontal or diagonal row, he'll win. | HR03 |
+| LR06 | If the total number of moves, i.e., 9 moves have been completed and neither the player 1 nor the player 2 has won, it'll end up in a draw. | HR05 |
 
