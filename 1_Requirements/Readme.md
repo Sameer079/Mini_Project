@@ -34,7 +34,7 @@ It can help to improve a person's concentration as well as strategic thinking
 
 ## Defining Our System
 
-![Description](https://github.com/Sameer079/blob/6_Images/flow.png?raw=true)
+![Description](https://github.com/Sameer079/Mini_Project/blob/master/6_Images/flow.png?raw=true)
 ### Explanation:
 * The game starts giving you single input options(1, 2, 3, 4, 5, 6, 7, 8, 9):
     * Player 1 palys with 'X', and enter the no. which place want to select.
