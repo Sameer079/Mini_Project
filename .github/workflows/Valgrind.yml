@@ -1,23 +1,26 @@
-name: Valgrind
+name: Dynamic Memory Check - Valgrind
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
+
+  workflow_dispatch:
 
 jobs:
-  build:
-
+  Valgrind:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: apt install dependency
-      run: |
-        sudo apt-get -y install valgrind
-        sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
-    - name: make test
-      run: |
-        make test -C 3_Implementation/ 
-        valgrind ./3_Implementation/tictactoe.out
+      - uses: actions/checkout@v2
+      - name: apt install dependency
+        run: |
+          sudo apt-get -y install valgrind
+          sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+      - name: build
+        run: make -C 3_Implementation/
+      - name: make test
+        run: make test -C 3_Implementation/
+      - name: Valgrind
+        run: make leak -C 3_Implementation/
